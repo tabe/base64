@@ -68,7 +68,7 @@
              (let ((p0 (fxarithmetic-shift-left (fxbit-field b0 0 2) 4))
                    (b1 (get-u8 iport)))
                (cond ((eof-object? b1)
-                      (put-char oport (vector-ref *table* p0))
+                      (put-alphabet p0)
                       (put-string oport "==")
                       (+ n 4))
                      (else
